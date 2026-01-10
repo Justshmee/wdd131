@@ -1,0 +1,46 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+h1 {
+  letter-spacing: 3px;
+}
+
+h2 {
+  color: #1f4fa3;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.content {
+  text-align: left;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+em {
+  display: block;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+.logo {
+  margin-top: 40px;
+}
+
+.logo img {
+  width: 150px;
+}
