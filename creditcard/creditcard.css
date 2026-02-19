@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.card-front {
+  position: relative;
+  z-index: 10;
+  background: #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+  grid-template-areas: 
+    "total total total"
+    "number number number"
+    "holder expiration expiration";
+}
+
+.total {
+  grid-area: total;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.card-number { grid-area: number; }
+.card-holder { grid-area: holder; }
+.expiration { grid-area: expiration; display:flex; gap:0.5rem; align-items: center; }
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.errors {
+  margin-top: 1rem;
+  color: red;
+  white-space: pre-line;
+}
+
+.expiration input {
+  width: 3rem;
+  text-align: center;
+}
+
+.card-back {
+  position: absolute;
+  top: auto;
+  bottom: -80px;
+  right: -80px;
+  left: auto;
+  width: 100%;
+  height: 100%;
+  background: #bbb;
+  border-radius: 1rem;
+  z-index: 1;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card-back::before {
+  content: '';
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  right: 0;
+  height: 1.2rem;
+  background: #000;
+  border-radius: 0.2rem;
+}
+
+.cvc-box {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  text-align: center;
+  z-index: 5;
+}
+
+.cvc-box label {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.cvc-box input {
+  width: 100%;
+  padding: 0.4rem;
+  text-align: center;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.submit-btn {
+  margin-top: 2rem;
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "total"
+      "number"
+      "holder"
+      "expiration";
+  }
+  .expiration { flex-direction: column; gap: 0.2rem; }
+  .expiration input { width: 100%; }
+}
