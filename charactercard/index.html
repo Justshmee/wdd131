@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snortleblat Character Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Snortleblat - Swamp Beast Diplomat">
+    <meta property="og:description" content="Meet Snortleblat, a Level 5 Swamp Beast Diplomat. Attack or level up!">
+    <meta property="og:url" content="https://yourwebsite.com/charactercard">
+    <meta property="og:image" content="https://yourwebsite.com/images/snortleblat.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Snortleblat - Swamp Beast Diplomat">
+    <meta name="twitter:description" content="A fantasy character card with interactive attack and level up features.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/snortleblat.png">
+
+    <link rel="icon" href="images/favicon.png">
+
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<div class="card">
+    <img id="char-image" src="images/snortleblat.png" alt="Snortleblat">
+
+    <div class="name-bar">
+        <h1 id="name">Snortleblat</h1>
+    </div>
+
+    <div class="card-content">
+        <p><strong>Class:</strong> <span id="class">Swamp Beast Diplomat</span></p>
+        <p><strong>Level:</strong> <span id="level">5</span></p>
+        <p><strong>Health:</strong> <span id="health">100</span></p>
+
+        <div class="buttons">
+            <button onclick="character.attacked()">Attacked</button>
+            <button onclick="character.levelUp()">Level Up</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
