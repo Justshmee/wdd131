@@ -52,6 +52,8 @@ body {
 .recipe-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .recipe-card {
@@ -72,12 +74,18 @@ body {
   padding: 1rem;
 }
 
+.tags-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
 .tag {
   display: inline-block;
   border: 1px solid #aaa;
   padding: 2px 6px;
   font-size: .8rem;
-  margin-bottom: .5rem;
 }
 
 .recipe-content h2 {
