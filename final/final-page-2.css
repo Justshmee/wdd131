@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Abyssinica+SIL&display=swap');
+
+:root {
+  --primary-color: #8c52ff;
+  --secondary-color: #5ce1e6;
+  --accent1-color: #000000;
+  --accent2-color: white;
+
+  --heading-font: 'Ubuntu', sans-serif;
+  --paragraph-font: 'Abyssinica SIL', serif;
+
+  --headline-color-on-white: var(--primary-color);
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: var(--primary-color);
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: #000000;
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--primary-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--paragraph-font);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background-attachment: fixed;
+  color: var(--paragraph-color-on-color);
+  font-size: 18px;
+}
+
+header {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+  padding: 1em;
+  border: 2px solid black;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  padding: 1em;
+  position: relative;
+}
+
+.hamburger {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: var(--nav-link-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--nav-background-color);
+  padding: 1em 0;
+}
+
+.nav-links li {
+  margin: 0.5em 0;
+}
+
+.nav-links a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 0.5em;
+  display: block;
+}
+
+.nav-links a:hover {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+}
+
+.nav-links.open {
+  display: flex;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 2px solid black;
+}
+
+.search input {
+  padding: .5rem;
+  width: 250px;
+}
+
+.search button {
+  padding: .5rem;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 350px;
+}
+
+.game-card img {
+  width: 100%;
+}
+
+.game-content {
+  padding: 1rem;
+  color: var(--paragraph-color-on-white);
+}
+
+.tags-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid #aaa;
+  padding: 2px 6px;
+  font-size: .8rem;
+}
+
+.game-content h2 {
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  margin: .5rem 0;
+  color: var(--headline-color-on-white);
+}
+
+.rating {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.genre, .developer, .release {
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
+
+.description {
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
+
+.review {
+  font-size: .9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  margin-top: 2em;
+  border: 2px solid black;
+}
+
+/* Tablet and larger */
+@media (min-width: 768px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4em;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    padding: 0;
+    background: none;
+  }
+
+  .nav-links li {
+    margin: 0 1em;
+  }
+
+  .nav-links a {
+    padding: 0.5em;
+  }
+
+  .game-card {
+    flex-direction: row;
+    width: 800px;
+    max-width: 800px;
+    border: 2px solid black;
+  }
+
+  .game-card img {
+    width: 50%;
+  }
+
+  .game-content {
+    width: 50%;
+  }
+
+  .description {
+    display: block;
+  }
+}
